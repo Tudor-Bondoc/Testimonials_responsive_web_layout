@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-primary-one: hsl(263, 55%, 52%);
+	--clr-primary-dark-one: hsl(217, 19%, 35%);
+	--clr-primary-dark-two: hsl(219, 29%, 14%);
+	--clr-neutral-light-one: hsl(0, 0%, 81%);
+	--clr-neutral-light-two: hsl(210, 46%, 95%);
+	--clr-white: hsl(0, 0%, 100%);
+	--fw-small: 500;
+	--fw-big: 600;
+}
+
+body {
+	background-color: var(--clr-neutral-light-two);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.main_content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 20px;
+}
+
+.testimonial {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	color: white;
+	padding: 30px;
+	border-radius: 15px;
+}
+
+.testimonial:nth-child(1) {
+	background-color: var(--clr-primary-one);
+}
+
+.testimonial:nth-child(2) {
+	background-color: var(--clr-primary-dark-one);
+}
+
+.testimonial:nth-child(3) {
+	background-color: var(--clr-white);
+	color: var(--clr-primary-dark-one) !important;
+}
+
+.testimonial:nth-child(4) {
+	background-color: var(--clr-primary-dark-two);
+}
+
+.testimonial:nth-child(5) {
+	background-color: var(--clr-white);
+	color: var(--clr-primary-dark-one) !important;
+}
+
+.person_picture {
+	border-radius: 50%;
+	margin: 0px 20px 30px 0px;
+	float: left;
+}
+
+.person_name {
+	font-size: 15px;
+	font-weight: var(--fw-small);
+}
+
+.verified_graduate {
+	font-size: 13px;
+	opacity: 50%;
+	font-weight: var(--fw-small);
+	margin-top: 2px;
+}
+
+.main_info {
+	margin-top: 55px;
+	font-size: 20px;
+	font-weight: var(--fw-big);
+}
+
+.secondary_info {
+	font-size: 15px;
+	font-weight: var(--fw-small);
+	opacity: 70%;
+}
+
+@media (min-width: 992px) {
+
+body {
+	padding: 100px 0px 100px 0px;
+
+}
+
+.main_content {
+	width: 80%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.testimonial:nth-child(1) {
+	grid-column-start: 1;
+	grid-column-end: 3; 
+}
+
+.testimonial:nth-child(2) {
+	grid-column-start: 3;
+	grid-column-end: 4; 
+}
+
+.testimonial:nth-child(3) {
+	grid-column-start: 1;
+	grid-column-end: 2; 
+}
+
+.testimonial:nth-child(4) {
+	grid-column-start: 2;
+	grid-column-end: 4; 
+}
+
+.testimonial:nth-child(5) {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+
+
+
+
+}
